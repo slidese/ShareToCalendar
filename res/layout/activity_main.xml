@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sharetocalendar="http://schemas.android.com/apk/res/se.slide.sharetocalendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spinnerCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    		android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/title"
+            android:hint="@string/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    		android:layout_marginRight="@dimen/activity_horizontal_margin"
+    		android:layout_marginTop="16dp"
+            android:layout_weight="1" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/description"
+            android:hint="@string/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    		android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    		android:layout_marginRight="@dimen/activity_horizontal_margin"
+    		android:layout_marginTop="16dp"
+	        android:orientation="horizontal" 
+	        >
+            
+            <Button
+	            android:id="@+id/buttonDate"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            style="@android:style/Widget.Holo.Light.Spinner"
+	            android:text="" />
+            
+            <Button
+	            android:id="@+id/buttonTime"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            style="@android:style/Widget.Holo.Light.Spinner"
+	            android:text="" />
+            
+        </LinearLayout>
+        
+        
+        
+        <View
+            android:id="@+id/divider"
+    		android:layout_width="match_parent"
+    		android:layout_height="1dip"
+    		android:layout_marginTop="32dp"
+    		android:background="?android:attr/dividerHorizontal" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" 
+	        >
+            
+	        <se.slide.sharetocalendar.TypefacedButton
+	            android:id="@+id/buttonSave"
+	            style="@style/button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:paddingTop="8dp"
+	            android:paddingBottom="8dp"
+	            sharetocalendar:typeface="Roboto-Light.ttf"
+	            android:text="@string/save" />
+		    
+		    <se.slide.sharetocalendar.TypefacedButton
+		        android:id="@+id/buttonCancel"
+		        style="@style/button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        sharetocalendar:typeface="Roboto-Light.ttf"
+		        android:text="@string/cancel" />
+        
+	    </LinearLayout>
+        
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

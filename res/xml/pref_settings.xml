@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="pref_alarm"
+        android:defaultValue="false"
+        android:summary="@string/pref_summary_alarm"
+        android:title="@string/pref_title_alarm" />
+    
+</PreferenceScreen>

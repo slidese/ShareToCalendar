@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Share to Calendar</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="about">About</string>
+    
+    <string name="version">Version %s</string>
+    
+    <string name="error_event">Error creating event</string>
+
+</resources>
