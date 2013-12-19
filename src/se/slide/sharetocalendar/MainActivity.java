@@ -28,6 +28,8 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -65,6 +67,9 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        Crashlytics.start(this);
+        
         setContentView(R.layout.activity_main);
         
         Intent intent = getIntent();
