@@ -11,8 +11,7 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="about">About</string>
-    
-    <string name="version">Version %s</string>
+    <string name="donate">Donate</string>
     
     <string name="error_event">Error creating event</string>
 

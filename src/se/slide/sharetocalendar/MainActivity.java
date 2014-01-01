@@ -29,6 +29,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.analytics.tracking.android.EasyTracker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -69,8 +70,11 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         super.onCreate(savedInstanceState);
         
         Crashlytics.start(this);
+        EasyTracker.getInstance(this).activityStart(this);
         
         setContentView(R.layout.activity_main);
+        
+        
         
         Intent intent = getIntent();
         String action = intent.getAction();
@@ -208,22 +212,21 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
     }
     
     @Override
+    public void onStart() {
+      super.onStart();
+      EasyTracker.getInstance(this).activityStart(this);  // Add this method.
+    }
+
+    @Override
+    public void onStop() {
+      super.onStop();
+      EasyTracker.getInstance(this).activityStop(this);  // Add this method.
+    }
+    
+    @Override
     protected void onPause() {
-        Log.d("Cal", "onPause");
         killApp();
         super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        Log.d("Cal", "onDestroy");
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onStop() {
-        Log.d("Cal", "onStop");
-        super.onStop();
     }
 
     public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {

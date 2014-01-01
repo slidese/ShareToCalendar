@@ -5,8 +5,13 @@
         android:summary="@string/pref_summary_about"
         android:title="@string/pref_title_about" />
     
-    <Preference
-        android:summary="@string/pref_summary_by"
-        android:title="@string/pref_title_by" />
+    <ListPreference
+        android:defaultValue="-1"
+        android:entries="@array/pref_donate_list"
+        android:entryValues="@array/pref_donate_list_values"
+        android:key="donate"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_donate" />
     
 </PreferenceScreen>

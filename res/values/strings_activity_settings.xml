@@ -10,9 +10,23 @@
     <string name="pref_summary_alarm">Enable alarm when creating events</string>
     
     <string name="pref_title_about">About</string>
-    <string name="pref_summary_about">Version</string>
+    <string name="pref_summary_about">Click for more info</string>
     
     <string name="pref_title_by">Made by</string>
     <string name="pref_summary_by">Mike, mike@slide.se</string>
+    
+    <!-- About settings -->
+    <string name="pref_title_donate">Donate</string>
+    
+    <string-array name="pref_donate_list">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="pref_donate_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     
 </resources>
