@@ -62,7 +62,7 @@ public class AboutActivity extends NoBoringActionBarActivity {
 
     @Override
     public void setupLogo(ImageView logo) {
-        logo.setImageResource(R.drawable.ic_launcher_nodpi);
+        logo.setImageResource(R.drawable.sharetocalendar_about_nodpi);
     }
 
     public ImageView[] setupKenBurnsView(KenBurnsView mHeaderPicture) {
