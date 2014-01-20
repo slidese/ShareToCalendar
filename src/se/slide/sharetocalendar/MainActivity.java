@@ -140,7 +140,9 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(view.getContext(), calendarName.get(position) + ", " + calendarIds.get(position), Toast.LENGTH_SHORT).show();
+                if (view == null)
+                    return;
+                
                 PreferenceManager.getDefaultSharedPreferences(view.getContext()).edit().putLong(LAST_SELECTED_CALENDAR, mCalendarIds.get(position)).commit();
             }
 
